@@ -1,0 +1,18 @@
+{% extends "waiter/base.html" %}
+{% block content %}
+    {% for restaurant in restaurants %}
+        <article class="media content-section">
+            
+            <div class="media-body">
+                <div class="article-metadata">
+                <a class="mr-2" href="#">{{ restaurant.name }}</a>
+                <small class="text-muted">{{ restaurant.date|date:"F d, Y" }}</small>
+                </div>
+                <h2><a class="article-title" href="#">{{ restaurant.email}}</a></h2>
+                <a class="article-content">{{ restaurant.contact }}</a>
+                <a class="mr-2" href="#">{{ restaurant.address }}</a>
+                <a class="mr-2" href="#">{{ restaurant.waiter }}</a>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
